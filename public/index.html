@@ -1,13 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Mi primera página web publicada con Firebase Hosting.">
+  <title>Mi sitio web</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f3f6fb;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 18px 8%;
+      background: #ffffff;
+      box-shadow: 0 2px 12px #17255412;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .logo {
+      color: #2563eb;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #475569;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 8%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      color: #1d4ed8;
+      background: #dbeafe;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      margin-bottom: 16px;
+      color: #172554;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 580px;
+      margin-bottom: 25px;
+      color: #64748b;
+      font-size: 1.1rem;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: white;
+      background: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .boton:hover {
+      background: #1d4ed8;
+    }
+
+    .tarjeta {
+      padding: 30px;
+      border-radius: 18px;
+      background: linear-gradient(145deg, #2563eb, #7c3aed);
+      color: white;
+      box-shadow: 0 18px 35px #2563eb33;
+    }
+
+    .tarjeta .icono {
+      margin-bottom: 15px;
+      font-size: 3rem;
+    }
+
+    .tarjeta h2 {
+      margin-bottom: 10px;
+    }
+
+    .seccion {
+      padding: 50px 8%;
+      background: white;
+      text-align: center;
+    }
+
+    .seccion h2 {
+      margin-bottom: 12px;
+      color: #172554;
+      font-size: 2rem;
+    }
+
+    .seccion p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #64748b;
+    }
+
+    footer {
+      padding: 22px;
+      color: #64748b;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0 14px 0 0;
+      }
+
+      .hero {
+        margin: 40px auto;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello, World!</h1>
-  <p>This is a simple HTML page.</p>
-  
+  <header>
+    <nav>
+      <div class="logo">Mi sitio web</div>
+      <div>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <span class="etiqueta">Mi primera página en Internet</span>
+        <h1>¡Hola! Bienvenido a mi sitio</h1>
+        <p>
+          Estoy aprendiendo a crear páginas web y a publicarlas con
+          Firebase Hosting. Este es mi primer proyecto.
+        </p>
+        <a class="boton" href="#sobre-mi">Conóceme</a>
+      </div>
+
+      <div class="tarjeta">
+        <div class="icono">💻</div>
+        <h2>Aprendiendo tecnología</h2>
+        <p>
+          HTML organiza el contenido y CSS ayuda a darle color,
+          estilo y una buena presentación.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion" id="sobre-mi">
+      <h2>Sobre esta página</h2>
+      <p>
+        Esta página está hecha con HTML y CSS. Cuando guardes los cambios,
+        podrás publicarlos ejecutando Firebase desde la carpeta de tu proyecto.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mi sitio web · Publicado con Firebase Hosting</p>
+  </footer>
 </body>
 </html>
